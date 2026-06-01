@@ -1,13 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "sequoia",
+  "name": "Babbily Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#f8585c",
+    "light": "#f8585c",
+    "dark": "#f8585c"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/Untitleddesign.png",
+    "dark": "/images/Untitleddesign.png"
+  },
   "navigation": {
     "pages": ["index", "quickstart"],
     "global": {
@@ -26,14 +29,15 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/Untitleddesign.png",
+    "dark": "/images/Untitleddesign.png",
+    "href": "https://babbily.com"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://support.babbily.com"
       }
     ],
     "primary": {
@@ -60,5 +64,11 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "fonts": {
+    "family": "Inter"
   }
 }
