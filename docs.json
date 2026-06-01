@@ -12,7 +12,18 @@
     "dark": "/images/Untitleddesign.png"
   },
   "navigation": {
-    "pages": ["index", "quickstart"],
+    "pages": [
+      "index",
+      "quickstart",
+      {
+        "group": "Features",
+        "pages": [
+          "features/tools-and-skills",
+          "features/connectors",
+          "features/memory"
+        ]
+      }
+    ],
     "global": {
       "anchors": [
         {
