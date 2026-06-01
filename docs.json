@@ -12,7 +12,7 @@
     "dark": "/images/Untitleddesign.png"
   },
   "navigation": {
-    "pages": ["index", "quickstart"],
+    "pages": ["index", "quickstart", "changelog/overview"],
     "global": {
       "anchors": [
         {

@@ -1,0 +1,31 @@
+---
+title: "Changelog"
+description: "Product updates and improvements to Babbily."
+mode: "center"
+---
+
+<Update label="May 21, 2026" tags={["new", "improved", "fixed"]}>
+
+## New
+
+**Mobile in-app subscriptions**
+You can now subscribe to Babbily Pro from the mobile app using Apple and Google in-app purchases. Existing Stripe subscriptions continue to work side by side, so you can manage billing from wherever you signed up. See the [Quickstart](/quickstart) to get started.
+
+## Improved
+
+**Refreshed visual design across the app**
+We rolled out a unified design system that brings consistent spacing, typography, and color across chat, news, billing, pricing, settings, voice selection, and search. Surfaces now feel more polished and easier to scan on both desktop and mobile.
+
+**Tablet and mobile layout polish**
+Welcome view, the library, the composer menu, and chat messages have been tuned for tablet and small-screen breakpoints. Long press, scroll, and popover behavior are smoother.
+
+**More translations**
+Additional UI strings are now localized so more of the product reads natively in your language.
+
+## Fixed
+
+- **Chat send no longer stalls after a token warning.** Submitting a message right after dismissing the token-limit warning now sends as expected.
+- **Model fallback on chat send.** When your selected model is unavailable, Babbily now reliably falls back to a working model instead of failing the request.
+- **Account and billing screen consistency.** Fixed small style and spacing issues in account setup, billing settings, password setup, and the pricing view.
+
+</Update>
