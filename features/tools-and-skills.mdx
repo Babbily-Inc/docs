@@ -1,0 +1,66 @@
+---
+title: "Tools and skills"
+description: "Control when Babbily reaches for web search, deep research, image generation, and other built-in tools."
+---
+
+Babbily comes with a set of built-in **tools** for things the base model can't do on its own—live web search, multi-step research, image generation, weather, charts, and more. **Skills** are reusable prompt presets that can call those tools and your connected apps when a chat needs them.
+
+You pick how much freedom Babbily has to use them on each turn.
+
+## Built-in tools
+
+| Tool | What it does |
+| --- | --- |
+| Web search | Looks up live information on the web and returns answers with source links. |
+| Deep research | Runs a multi-step research plan with citations across many sources. |
+| Site map | Crawls and summarizes a specific site or domain. |
+| Finance research | Pulls market, ticker, and filing context with citations. |
+| Weather | Returns current conditions and a forecast for a location. |
+| Stats | Generates inline charts and tables from data in your prompt. |
+| QR code | Creates a QR code for a URL or text. |
+| Image generation | Creates images from a text prompt. |
+| Video generation | Creates short videos from a text prompt. |
+
+Some tools require a paid plan or a specific model. If a tool isn't available for the active model, it's hidden in the composer menu.
+
+## Tool modes
+
+Open the composer menu (the icon next to the message box) and choose a mode:
+
+- **Auto** – Let Babbily choose tools. Babbily decides whether the question needs search, research, or another tool, and uses it automatically. Best for most chats.
+- **Manual** – Pick tools for this chat. You select exactly which tool Babbily should use for the next reply. Use this when you want to force web search on a question Babbily would otherwise answer from memory, or to skip search for a creative task.
+- **Off** – Disable tool calls. Babbily answers from the model only, with no live data, no images, and no connector actions. Use this for fully offline-style replies, brainstorming, or when you want a fast, deterministic answer.
+
+The current mode persists for the chat until you change it.
+
+## Pick a tool manually
+
+<Steps>
+  <Step title="Switch to Manual">
+    Open the composer menu and select **Manual**.
+  </Step>
+  <Step title="Choose the tool">
+    Pick the tool you want Babbily to use for the next message—for example, **Deep research** or **Image generation**.
+  </Step>
+  <Step title="Send your message">
+    Babbily uses the selected tool for that reply. The selection stays active for the chat, so follow-ups continue to prefer the same tool until you change it.
+  </Step>
+</Steps>
+
+## Skills
+
+Skills are saved prompts that bundle instructions, tool preferences, and connector use into a single shortcut. For example, a "Weekly status" skill might pull tasks from Asana, recent commits from GitHub, and format them into a report.
+
+You can:
+
+- **Browse verified skills** in **Settings → Skills**. Toggle any skill on or off.
+- **Trigger a skill in chat** by typing `/` in the composer and picking it from the menu.
+- **Let Babbily pick automatically.** When a skill closely matches your message, Babbily can apply it in **Auto** mode.
+
+Verified skills are reviewed by Babbily. You can also create local skills for your own workflows in **Settings → Skills**.
+
+## Tips
+
+- If Babbily answered without searching and you wanted live data, set the mode to **Manual** and pick **Web search**, or re-ask with "search the web for…".
+- If replies feel slow, switch to **Off** for quick, model-only answers.
+- Combine **Skills** with [Connectors](/features/connectors) to automate repeating workflows across your apps.
