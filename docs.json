@@ -20,7 +20,8 @@
         "pages": [
           "features/tools-and-skills",
           "features/connectors",
-          "features/memory"
+          "features/memory",
+          "features/usage-budget"
         ]
       }
     ],
