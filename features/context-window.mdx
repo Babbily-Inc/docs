@@ -34,6 +34,16 @@ Compaction:
 
 You do not need to enable anything—auto-compaction is on by default for every chat.
 
+### How compaction affects the usage indicator
+
+After a thread is compacted, the context usage indicator counts the compaction summary as part of the prompt Babbily sends to the model—because that's exactly what happens behind the scenes. As a result:
+
+- Usage does not drop to zero after compaction; it reflects the summary plus any messages sent since.
+- The summary's size grows with how much history it represents, so very long threads stay above zero even right after a fresh compaction.
+- If usage climbs back to 80% later in the same thread, Babbily compacts again, replacing the previous summary with an updated one.
+
+This keeps the percentage you see honest: it is always the share of the window your next reply will actually consume.
+
 ## What to do when the window fills up
 
 If a chat reaches the limit before compaction can catch up, Babbily shows a **Context window is full** prompt above the composer with a **New thread** button. From there you can:
