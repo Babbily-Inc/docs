@@ -21,6 +21,7 @@
           "features/tools-and-skills",
           "features/connectors",
           "features/memory",
+          "features/context-window",
           "features/usage-budget"
         ]
       }
