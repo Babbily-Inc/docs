@@ -9,7 +9,8 @@ Every Babbily plan includes a monthly **API usage budget** in US dollars that co
 
 - Each plan has a fixed monthly budget. Every model call deducts its real cost (in cents) from your remaining balance.
 - The budget resets on your billing period end date. If you're on a paid plan, that matches your Stripe renewal date.
-- Usage is shared across everything in Babbily: chat, image generation, video generation, translate, news, and skills.
+- Usage is shared across everything you trigger in Babbily: chat, image generation, video generation, translate, and skills.
+- News articles you generate from the **News** view are *not* charged to your budget. They run on a separate hourly rate limit instead (see [News article generation limits](#news-article-generation-limits)).
 - Babbily refreshes your balance in the background after each generation, so the displayed total catches up within a few seconds.
 
 ## Budget by plan
@@ -58,6 +59,16 @@ The budget resets automatically at the end of each billing period:
 
 If a sync with the upstream gateway is delayed, the card shows a *Refreshing...* indicator and your real balance updates within a minute.
 
+## News article generation limits
+
+The **News** view lets you expand a headline into a full article using Perplexity Sonar Pro. Because Babbily covers this cost on your behalf, generated articles don't deduct from your monthly API usage budget. They're instead capped by a rolling hourly limit:
+
+- **20 articles per hour** per user, sliding window.
+- The window starts on your first generation and resets one hour later.
+- When you hit the cap, Babbily returns a `429` response and the **Generate article** action shows when the limit resets. Try again after that time.
+
+Reading existing articles, browsing headlines, and sharing news links don't count toward the limit—only triggering a fresh article generation does.
+
 ## FAQ
 
 <AccordionGroup>
@@ -72,5 +83,8 @@ If a sync with the upstream gateway is delayed, the card shows a *Refreshing...*
   </Accordion>
   <Accordion title="Can I see per-request cost?">
     Per-request cost isn't shown in chat today. The card reflects the total deducted across all of your activity in the current period.
+  </Accordion>
+  <Accordion title="Why don't generated news articles count against my budget?">
+    Babbily pays for news article generation directly and protects the shared cost with a per-user hourly rate limit instead. See [News article generation limits](#news-article-generation-limits) for the cap.
   </Accordion>
 </AccordionGroup>
