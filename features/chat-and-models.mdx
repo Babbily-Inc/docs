@@ -6,9 +6,14 @@ icon: "messages-square"
 
 Chat is the center of Babbily. You can ask questions, draft content, analyze files, research topics, create media, and continue work across a thread.
 
-<Card title="Voice dictation" icon="mic" href="/features/voice-dictation">
-  Prefer speaking to typing? Use voice dictation in chat or Translate when your device supports it.
-</Card>
+<CardGroup cols={2}>
+  <Card title="Model capabilities" icon="messages-square" href="/features/model-capabilities">
+    Choose a model for speed, reasoning, files, tools, media, context, and API usage budget.
+  </Card>
+  <Card title="Voice dictation" icon="mic" href="/features/voice-dictation">
+    Prefer speaking to typing? Use voice dictation in chat or Translate when your device supports it.
+  </Card>
+</CardGroup>
 
 ## Choose a model
 
@@ -57,3 +62,12 @@ Start a new thread when:
 <Tip>
   If Babbily keeps using old context, start a new thread and restate only the details that still matter.
 </Tip>
+
+<CardGroup cols={2}>
+  <Card title="Prompting patterns" icon="wand-sparkles" href="/guides/prompting-patterns">
+    Write clearer prompts with goals, context, audience, constraints, and output format.
+  </Card>
+  <Card title="Known limits" icon="wrench" href="/troubleshooting/known-limits-and-expectations">
+    Understand what can vary by model, tool, file, connector, plan, usage, and context.
+  </Card>
+</CardGroup>

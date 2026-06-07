@@ -1,0 +1,291 @@
+---
+title: "Connector deep dives"
+description: "See practical examples for using Babbily with email, files, docs, spreadsheets, chat, project, developer, support, and business connectors."
+icon: "plug"
+---
+
+Use these examples when you know which app you want Babbily to use but want a more specific prompt pattern.
+
+<Warning>
+  Babbily can only use connector access you authorize. Review approval-required actions before they send messages, update records, change workspace content, or affect customer and billing data.
+</Warning>
+
+## Google Workspace
+
+<AccordionGroup>
+  <Accordion title="Gmail">
+    Use Gmail when email threads contain the context you need.
+
+    Try:
+
+    ```text
+    Use Gmail to find the latest thread with this customer. Summarize open questions, blockers, and suggested next steps.
+    ```
+
+    Good follow-ups include drafting a reply, finding unanswered messages, or turning a thread into a meeting agenda. Review any send action before approving it.
+  </Accordion>
+
+  <Accordion title="Google Drive">
+    Use Google Drive to find and reference files you can access.
+
+    Try:
+
+    ```text
+    Search Google Drive for recent planning docs about this launch and summarize the common themes.
+    ```
+
+    Good follow-ups include comparing documents, extracting action items, or using a file as context for a new brief.
+  </Accordion>
+
+  <Accordion title="Google Docs">
+    Use Google Docs to create, search, or update collaborative documents.
+
+    Try:
+
+    ```text
+    Turn this chat into a Google Docs outline for a customer-facing implementation brief.
+    ```
+
+    Review the destination and content before approving create or update actions.
+  </Accordion>
+
+  <Accordion title="Google Sheets">
+    Use Google Sheets when the work is structured around rows, columns, formulas, or ranges.
+
+    Try:
+
+    ```text
+    Use Google Sheets to summarize this pipeline sheet by status, owner, and next action.
+    ```
+
+    Ask Babbily to propose formulas, formatting, or updates before approving changes.
+  </Accordion>
+
+  <Accordion title="Google Slides">
+    Use Google Slides to inspect, draft, or update presentations.
+
+    Try:
+
+    ```text
+    Create a slide outline from this research thread with titles, bullets, and speaker notes.
+    ```
+
+    Slide actions work best when you specify audience, number of slides, and the level of polish you need.
+  </Accordion>
+
+  <Accordion title="Google Calendar">
+    Use Google Calendar for schedule context and meeting preparation.
+
+    Try:
+
+    ```text
+    Use Google Calendar to summarize my upcoming customer meetings this week and prepare a prep checklist.
+    ```
+
+    Calendar access depends on your connected account permissions and calendar visibility.
+  </Accordion>
+</AccordionGroup>
+
+## Microsoft
+
+<AccordionGroup>
+  <Accordion title="Outlook">
+    Use Outlook for email and calendar context.
+
+    Try:
+
+    ```text
+    Use Outlook to find recent emails from this partner and draft a concise follow-up.
+    ```
+
+    Review recipients, subject, body, and attachments before approving any send action.
+  </Accordion>
+
+  <Accordion title="Excel">
+    Use Excel for workbook, worksheet, table, formula, chart, filter, and range work.
+
+    Try:
+
+    ```text
+    Use Excel to summarize this workbook by region and flag rows that need follow-up.
+    ```
+
+    Ask for a proposed change summary before approving updates to shared workbooks.
+  </Accordion>
+
+  <Accordion title="Microsoft Teams">
+    Use Microsoft Teams to reference chats, channels, and meeting context.
+
+    Try:
+
+    ```text
+    Use Microsoft Teams to summarize decisions from this project channel and list open owners.
+    ```
+
+    Connected-app visibility depends on your role and workspace permissions.
+  </Accordion>
+</AccordionGroup>
+
+## Collaboration and project work
+
+<AccordionGroup>
+  <Accordion title="Slack">
+    Use Slack to summarize channels, messages, and threads.
+
+    Try:
+
+    ```text
+    Use Slack to find the latest decision about this launch and summarize who owns each next step.
+    ```
+
+    Review any message or channel update before approving it.
+  </Accordion>
+
+  <Accordion title="Notion">
+    Use Notion to search pages, databases, notes, comments, and workspace content.
+
+    Try:
+
+    ```text
+    Use Notion to find project notes for this initiative and turn them into a current status summary.
+    ```
+
+    Good follow-ups include drafting page updates, summarizing database items, or preparing a Notion-ready brief.
+  </Accordion>
+
+  <Accordion title="Asana">
+    Use Asana to reference tasks, projects, owners, and deadlines.
+
+    Try:
+
+    ```text
+    Use Asana to summarize this project's current status, blocked tasks, and owners.
+    ```
+
+    Review task updates before approving changes.
+  </Accordion>
+
+  <Accordion title="Monday.com">
+    Use Monday.com to reference boards, items, project status, owners, and timelines.
+
+    Try:
+
+    ```text
+    Use Monday.com to summarize this board by status and flag items without owners.
+    ```
+
+    Ask Babbily to show proposed updates before approving workspace changes.
+  </Accordion>
+</AccordionGroup>
+
+## Developer and operations
+
+<AccordionGroup>
+  <Accordion title="GitHub">
+    Use GitHub to search repositories, issues, pull requests, and code context.
+
+    Try:
+
+    ```text
+    Use GitHub to summarize this pull request, list risks, and draft review questions.
+    ```
+
+    GitHub is useful for code understanding and collaboration, but repository permissions still control what Babbily can access.
+  </Accordion>
+
+  <Accordion title="Vercel">
+    Use Vercel to reference deployments, projects, logs, and hosting context available to your account.
+
+    Try:
+
+    ```text
+    Use Vercel to summarize the latest deployment status and prepare release notes for the team.
+    ```
+
+    Keep requests focused on visible deployment and project signals, not sensitive operational details.
+  </Accordion>
+
+  <Accordion title="Sentry">
+    Use Sentry to reference issues, traces, release health, and incident context.
+
+    Try:
+
+    ```text
+    Use Sentry to summarize recent issues for this project and group them by customer impact.
+    ```
+
+    Avoid pasting secrets or sensitive event payloads into chat. Use summaries and customer-safe details where possible.
+  </Accordion>
+
+  <Accordion title="Supabase">
+    Use Supabase to reference authorized project context and developer workflow information.
+
+    Try:
+
+    ```text
+    Use Supabase to summarize this project's data structure at a high level and identify questions for the engineering team.
+    ```
+
+    Keep sensitive credentials, private keys, and confidential data out of chat.
+  </Accordion>
+</AccordionGroup>
+
+## Customer and business
+
+<AccordionGroup>
+  <Accordion title="Intercom">
+    Use Intercom to reference customer conversations and support context.
+
+    Try:
+
+    ```text
+    Use Intercom to summarize this customer's recent conversations, open issues, and suggested response.
+    ```
+
+    Review customer replies before approving any send or update action.
+  </Accordion>
+
+  <Accordion title="Stripe">
+    Use Stripe to reference authorized customer, billing, payment, and subscription context.
+
+    Try:
+
+    ```text
+    Use Stripe to summarize this customer's subscription status and prepare support notes.
+    ```
+
+    Treat billing and payment context carefully. Do not paste payment card numbers or sensitive financial identifiers into chat.
+  </Accordion>
+
+  <Accordion title="Zapier">
+    Use Zapier to plan or review app workflows and automations.
+
+    Try:
+
+    ```text
+    Use Zapier to help plan an automation that creates a task when a customer support thread is tagged urgent.
+    ```
+
+    Review automation steps before approving changes that affect other apps.
+  </Accordion>
+</AccordionGroup>
+
+## When a connector answer seems incomplete
+
+Try these checks:
+
+- Confirm the connector shows connected in **Settings > Connectors**.
+- Check whether your connected-app role can access the item.
+- Make the app, folder, channel, project, or person more specific.
+- Use **Manual** mode and choose the connector directly.
+- Wait a moment after connecting a new app.
+- Revoke and reauthorize access from the connected app if permissions changed.
+
+<CardGroup cols={2}>
+  <Card title="Connector capabilities" icon="list-checks" href="/features/connector-capabilities">
+    See the broader connector catalog and capability summary.
+  </Card>
+  <Card title="Data controls FAQ" icon="shield" href="/features/data-controls-and-privacy-faq">
+    Review connector access, approvals, and privacy controls.
+  </Card>
+</CardGroup>

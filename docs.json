@@ -26,8 +26,10 @@
         "pages": [
           "quickstart",
           "guides/task-recipes",
+          "guides/prompting-patterns",
           "features/account-and-settings",
-          "features/chat-and-models"
+          "features/chat-and-models",
+          "features/model-capabilities"
         ]
       },
       {
@@ -50,11 +52,13 @@
         "icon": "sparkles",
         "pages": [
           "features/memory",
+          "features/memory-examples",
           "features/tools-and-skills",
           "features/built-in-tools-reference",
           "features/saved-prompts",
           "features/connectors",
-          "features/connector-capabilities"
+          "features/connector-capabilities",
+          "features/connector-deep-dives"
         ]
       },
       {
@@ -63,7 +67,8 @@
         "pages": [
           "features/library-and-sharing",
           "features/teams",
-          "features/team-admin-guide"
+          "features/team-admin-guide",
+          "features/team-offboarding-and-access-review"
         ]
       },
       {
@@ -73,13 +78,15 @@
           "features/usage-budget",
           "features/billing-and-plans",
           "features/privacy-and-data",
-          "features/data-controls-and-privacy-faq"
+          "features/data-controls-and-privacy-faq",
+          "features/trust-safety-and-data-boundaries"
         ]
       },
       {
         "group": "Troubleshooting",
         "icon": "wrench",
         "pages": [
+          "troubleshooting/known-limits-and-expectations",
           "troubleshooting/common-issues",
           "troubleshooting/contact-support"
         ]
