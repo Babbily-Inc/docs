@@ -1,0 +1,118 @@
+---
+title: "Prompting patterns"
+description: "Write Babbily prompts that produce clearer, more useful answers."
+icon: "wand-sparkles"
+---
+
+Good prompts tell Babbily what you are trying to accomplish, what context matters, and how you want the answer shaped.
+
+## The simple pattern
+
+Use this structure when you want a reliable answer:
+
+```text
+Goal: [what you want]
+Context: [what Babbily should know]
+Audience: [who this is for]
+Constraints: [tone, length, sources, tools, files, or style]
+Format: [bullets, table, memo, plan, checklist, draft, chart]
+```
+
+Example:
+
+```text
+Goal: Draft a customer update.
+Context: We fixed the issue and monitoring is stable.
+Audience: Non-technical customer admins.
+Constraints: Calm, concise, no blame, include next steps.
+Format: Email draft with subject line.
+```
+
+## Ask for the output shape
+
+If you do not specify a format, Babbily chooses one. Ask for the format you need:
+
+- `Return this as a table.`
+- `Give me a 5-step checklist.`
+- `Write this as a customer email.`
+- `Summarize this as risks, decisions, and next steps.`
+- `Show this as a bar chart if the data is clear enough.`
+
+## Tell Babbily what to use
+
+Name the context source when it matters.
+
+Examples:
+
+- `Use the attached file.`
+- `Use web search and cite sources.`
+- `Use Gmail to find the latest customer thread.`
+- `Use my Memory Profile only if it helps.`
+- `Do not use tools for this reply.`
+
+## Improve an answer with follow-ups
+
+Useful follow-ups:
+
+- `Make it shorter.`
+- `Add examples.`
+- `Explain the trade-offs.`
+- `Turn this into a checklist.`
+- `Make it more customer-friendly.`
+- `What assumptions did you make?`
+- `What should I verify before using this?`
+
+## Prompt recipes
+
+<AccordionGroup>
+  <Accordion title="Drafting">
+    ```text
+    Draft a [format] for [audience]. The goal is [goal]. Use a [tone] tone. Include [required details]. Avoid [things to avoid].
+    ```
+  </Accordion>
+
+  <Accordion title="Research">
+    ```text
+    Research [topic]. Use current public sources, cite them, and return a table with findings, source links, confidence, and open questions.
+    ```
+  </Accordion>
+
+  <Accordion title="File analysis">
+    ```text
+    Analyze the attached file for [goal]. Return a summary, risks, important details, and recommended next actions.
+    ```
+  </Accordion>
+
+  <Accordion title="Connector work">
+    ```text
+    Use [connector] to find [context]. Summarize [desired result]. Ask before sending, updating, or changing anything.
+    ```
+  </Accordion>
+
+  <Accordion title="Creative work">
+    ```text
+    Create [asset type] for [audience/use]. Style: [style]. Include [elements]. Avoid [constraints]. Size/aspect ratio: [size].
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## When answers miss the mark
+
+Try:
+
+- Restating the goal.
+- Adding the audience.
+- Asking for a different format.
+- Providing an example of the style you want.
+- Saying what to ignore.
+- Starting a new thread if old context is steering the answer.
+- Switching models when the task needs a different capability.
+
+<CardGroup cols={2}>
+  <Card title="Task recipes" icon="book-open-check" href="/guides/task-recipes">
+    Start from complete workflows for files, research, connectors, media, and translation.
+  </Card>
+  <Card title="Model capabilities" icon="messages-square" href="/features/model-capabilities">
+    Choose the right model for speed, reasoning, files, tools, media, and context.
+  </Card>
+</CardGroup>

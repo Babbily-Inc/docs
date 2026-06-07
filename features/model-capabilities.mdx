@@ -1,0 +1,86 @@
+---
+title: "Model capabilities"
+description: "Choose a Babbily model based on speed, reasoning, files, tools, media, context, and API usage budget."
+icon: "messages-square"
+---
+
+Babbily gives you access to multiple models from one chat surface. The best model depends on what you are trying to do, how much context you need, and which capabilities are available for your plan.
+
+<Note>
+  Model availability, names, and capabilities can change over time. Use the model picker as the source of truth for what is available in your account.
+</Note>
+
+## Choose by task
+
+| If you need to... | Look for a model that is strong at... | Helpful setup |
+| --- | --- | --- |
+| Draft, rewrite, or summarize quickly | Speed and clear writing | Keep tools **Off** unless the answer needs current information. |
+| Reason through a complex plan | Deeper reasoning | Give goals, constraints, and decision criteria. |
+| Analyze files | File support and enough context | Attach the most relevant files first. |
+| Use current sources | Tool support | Use **Auto** or **Manual > Web search**. |
+| Produce a broad research brief | Research support | Use **Manual > Deep research** and ask for citations. |
+| Create or edit images | Image generation support | Describe subject, style, composition, lighting, and aspect ratio. |
+| Create short videos | Video generation support | Describe motion, pacing, duration, and source media when supported. |
+| Work in a long thread | Larger context window | Watch the context indicator and start a new thread when the topic changes. |
+| Save API usage budget | Lightweight model and fewer tools | Use model-only chat for simple drafts and rewrites. |
+
+## Capability signals
+
+The model picker and composer can show what a model supports. Common capability differences include:
+
+- File types and file size behavior.
+- Context window size.
+- Tool availability.
+- Image generation or editing.
+- Video generation or editing.
+- Speed and reasoning depth.
+- API usage budget impact.
+
+If a file type, tool, or media action is hidden, the selected model may not support it.
+
+## Switch models during work
+
+You can switch models when the task changes.
+
+Good switching patterns:
+
+- Start with a faster model to brainstorm.
+- Switch to a stronger reasoning model for decisions or plans.
+- Switch to a file-capable model before attaching documents.
+- Switch to a media-capable model for image or video work.
+- Start a new thread if older context is steering the answer in the wrong direction.
+
+<Tip>
+  When you switch models, restate the key goal if the thread is long. That helps the new reply focus on the current task.
+</Tip>
+
+## Usage considerations
+
+More advanced model work can use more of your API usage budget, especially when it includes tools, long file context, image generation, video generation, or deep research.
+
+For budget-sensitive work:
+
+- Use shorter prompts when the task is simple.
+- Avoid unnecessary file attachments.
+- Turn tools **Off** for model-only drafting.
+- Use search or deep research only when sources matter.
+- Check your usage card before running image or video generation.
+
+## Troubleshooting
+
+If a capability is missing:
+
+- Switch to a model that supports it.
+- Change tool mode from **Off** to **Auto** or **Manual**.
+- Check whether your plan supports the feature.
+- Check your remaining API usage budget.
+- Try a new thread if the current one has a long or confusing context history.
+
+<CardGroup cols={2}>
+  <Card title="Chat and models" icon="messages-square" href="/features/chat-and-models">
+    Learn the basics of choosing models and continuing threads.
+  </Card>
+  <Card title="Known limits" icon="wrench" href="/troubleshooting/known-limits-and-expectations">
+    Understand why capabilities can vary by model, plan, file, tool, and connector.
+  </Card>
+</CardGroup>

@@ -1,0 +1,94 @@
+---
+title: "Memory examples"
+description: "See what to save to memory, what to keep in the current chat, and what to avoid saving."
+icon: "brain"
+---
+
+Memory works best when it captures stable context you want Babbily to reuse across chats. Use this guide to decide what belongs in memory and how to phrase it.
+
+## Good memory examples
+
+| Save this kind of context | Example |
+| --- | --- |
+| Communication preference | `Remember that I prefer concise answers with clear next steps.` |
+| Role or team context | `Remember that I manage customer operations for a B2B software company.` |
+| Recurring project context | `Remember that Project Atlas is our customer onboarding refresh.` |
+| Writing style | `Remember that customer emails should sound warm, direct, and low-jargon.` |
+| Units or formatting | `Remember that I prefer dates in Month Day, Year format.` |
+| Ongoing audience context | `Remember that my weekly updates are written for non-technical executives.` |
+
+## Keep this in the current chat
+
+Some details are useful once but should not become long-term memory.
+
+Examples:
+
+- A one-time deadline.
+- A temporary draft direction.
+- A single customer's private details.
+- A file-specific instruction.
+- A preference that only applies to this project phase.
+
+```text
+For this chat only, write the proposal in a more formal tone.
+```
+
+## Do not save sensitive information
+
+Do not ask Babbily to remember:
+
+- Passwords.
+- Verification codes.
+- API keys.
+- Private keys.
+- Payment card numbers.
+- Government identifiers.
+- Raw connected-app credentials.
+- Confidential details you are not allowed to use in Babbily.
+
+<Warning>
+  Memory is designed for useful context, not secrets. Keep sensitive information out of chat and memory.
+</Warning>
+
+## Update memory when context changes
+
+When a preference or project changes, say so directly.
+
+```text
+Update my memory: for customer updates, use a shorter summary first and put details under headings.
+```
+
+You can also open **Settings > Memory** to review your Memory Profile and remove eligible memory citations.
+
+## Ask Babbily what it remembers
+
+Use **Settings > Memory** for the most complete view. You can also ask in chat:
+
+```text
+What do you remember that might affect how you answer my work questions?
+```
+
+If something is outdated, ask Babbily to forget it:
+
+```text
+Forget that Project Atlas is my top priority.
+```
+
+## Memory quality checklist
+
+Before saving something, ask:
+
+- Will this still be true in future chats?
+- Would this improve many replies, not just one?
+- Is it safe to reuse?
+- Is it phrased clearly?
+- Would I be comfortable seeing it in **Settings > Memory**?
+
+<CardGroup cols={2}>
+  <Card title="Memory" icon="brain" href="/features/memory">
+    Learn how to review, update, and remove memory.
+  </Card>
+  <Card title="Data controls FAQ" icon="shield" href="/features/data-controls-and-privacy-faq">
+    Review privacy controls for memory, sharing, connectors, and Library items.
+  </Card>
+</CardGroup>

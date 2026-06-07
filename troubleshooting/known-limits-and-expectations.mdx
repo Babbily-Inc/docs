@@ -1,0 +1,78 @@
+---
+title: "Known limits and expectations"
+description: "Understand why Babbily behavior can vary by model, tool, file, connector, plan, usage, and context."
+icon: "wrench"
+---
+
+Babbily combines models, tools, memory, connectors, files, and media features. Some behavior can vary based on the selected model, your plan, your usage state, and the access you authorize.
+
+## Capabilities can vary
+
+| Area | What can vary | What to try |
+| --- | --- | --- |
+| Models | Speed, reasoning, context size, file support, tools, and media. | Switch models or start a new thread. |
+| Tools | Availability by model, plan, tool mode, and usage. | Use **Auto** or **Manual** and check your usage. |
+| Files | Supported file types, size behavior, and how much context fits. | Attach only the most relevant files first. |
+| Visual replies | Maps, charts, QR codes, media, and citations may fall back to text. | Ask for the format explicitly and provide cleaner data. |
+| Connectors | Access depends on authorization and your role in the connected app. | Reconnect, check app permissions, or choose the connector manually. |
+| Memory | Saved context may need review or removal when it becomes outdated. | Open **Settings > Memory** and remove eligible citations. |
+| Usage | Usage cards can take a short time to refresh after AI work. | Wait a moment, refresh, and check **Settings > Billing**. |
+
+## Search and research
+
+Search and deep research can summarize public information and cite sources, but they can still miss sources, encounter blocked pages, or return incomplete results for fast-changing topics.
+
+For important decisions:
+
+- Review citations.
+- Open original sources.
+- Check authoritative sources directly.
+- Ask Babbily to list assumptions and confidence.
+
+## Long chats
+
+Long threads can become harder to steer. Babbily may compact older context so a thread can continue, but old assumptions can still influence the conversation.
+
+Start a new thread when:
+
+- The topic changed.
+- The context indicator is near the limit.
+- You want a clean answer.
+- Earlier files or instructions are no longer useful.
+
+## Connectors
+
+Connector results depend on:
+
+- Whether the connector is connected.
+- Your role in the connected app.
+- App permissions and workspace settings.
+- Whether the requested item exists.
+- Whether an action requires approval.
+
+If a connector answer seems incomplete, make the request more specific and confirm the connected app can access the item.
+
+## Media generation
+
+Image and video generation can take longer than text replies and usually uses more API usage budget. Results can vary by prompt clarity, source media, model support, plan, usage state, and safety checks.
+
+Review generated media before using it publicly.
+
+## When to contact support
+
+Contact support if:
+
+- A control that should be visible is missing after refreshing.
+- Usage or billing still looks wrong after a short wait.
+- You cannot remove data from available controls.
+- A connector stays stuck after reconnecting.
+- A feature repeatedly fails with the same customer-visible error.
+
+<CardGroup cols={2}>
+  <Card title="Common issues" icon="wrench" href="/troubleshooting/common-issues">
+    Try quick fixes for tools, connectors, memory, usage, media, translation, voice, news, and billing.
+  </Card>
+  <Card title="Contact support" icon="life-buoy" href="/troubleshooting/contact-support">
+    Learn what to include when you need help.
+  </Card>
+</CardGroup>
