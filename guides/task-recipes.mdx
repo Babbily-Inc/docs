@@ -1,0 +1,187 @@
+---
+title: "Task recipes"
+description: "Use these customer-friendly recipes to get useful work done faster in Babbily."
+icon: "book-open-check"
+---
+
+These recipes show common ways to use Babbily. Treat them as starting points, then adjust the prompt, model, files, tools, or connectors for your work.
+
+<CardGroup cols={2}>
+  <Card title="Analyze a file" icon="paperclip" href="#analyze-a-file">
+    Attach a file and ask for a summary, table, risks, or next steps.
+  </Card>
+  <Card title="Research with citations" icon="search" href="#research-with-citations">
+    Use search or deep research for current, source-backed answers.
+  </Card>
+  <Card title="Create a deliverable" icon="file-text" href="#turn-a-chat-into-a-document-or-slide-outline">
+    Turn a chat into a memo, brief, document, or slide outline.
+  </Card>
+  <Card title="Use connected apps" icon="plug" href="#summarize-emails-with-a-connector">
+    Ask Babbily to summarize email, documents, project work, or app context.
+  </Card>
+</CardGroup>
+
+## Analyze a file
+
+Use this when you want Babbily to summarize, compare, extract, rewrite, or turn an attachment into action items.
+
+<Steps>
+  <Step title="Open a chat">
+    Start a new chat or open an existing thread where the file belongs.
+  </Step>
+  <Step title="Choose a supported model">
+    Pick a model that supports the file type you want to use.
+  </Step>
+  <Step title="Attach the file">
+    Add one or a few relevant files. Long files can fill the context window, so include the most useful material first.
+  </Step>
+  <Step title="Ask for the outcome">
+    Name the result you want: summary, risks, table, action items, comparison, rewrite, or plan.
+  </Step>
+  <Step title="Continue in the same thread">
+    Ask follow-up questions while the file context is still useful.
+  </Step>
+</Steps>
+
+```text
+Summarize this document for an executive audience. Include open risks, decisions needed, and a five-item action list.
+```
+
+<Warning>
+  Do not upload secrets, private keys, payment details, or files you are not allowed to use in Babbily.
+</Warning>
+
+## Research with citations
+
+Use this when a reply needs current information, public sources, or a broader research report.
+
+<Steps>
+  <Step title="Choose the right tool mode">
+    Use **Auto** for most research. Use **Manual > Web search** for focused current lookup, or **Manual > Deep research** for broader multi-source work.
+  </Step>
+  <Step title="Ask a source-aware question">
+    Tell Babbily what to research and what sources or time window matter.
+  </Step>
+  <Step title="Name the structure">
+    Ask for a brief, comparison, timeline, pros and cons, source table, or recommendation.
+  </Step>
+  <Step title="Review citations">
+    Open cited sources before relying on important conclusions.
+  </Step>
+</Steps>
+
+```text
+Search current public sources and compare these three vendors. Return a table with pricing signals, strengths, risks, and citations.
+```
+
+## Turn a chat into a document or slide outline
+
+Use this after a useful chat, brainstorm, research run, or meeting-prep thread.
+
+<Steps>
+  <Step title="Open the chat">
+    Reopen the thread you want to turn into a deliverable.
+  </Step>
+  <Step title="Ask for the deliverable">
+    Name the format: memo, brief, meeting notes, project plan, document outline, or slide outline.
+  </Step>
+  <Step title="Use a connector when helpful">
+    If you use Google Docs, Google Slides, Notion, or another supported app, connect it first and ask Babbily to prepare the content there when available.
+  </Step>
+  <Step title="Review before action">
+    Approve connector actions only after checking the content and destination.
+  </Step>
+</Steps>
+
+```text
+Turn this thread into a six-slide outline for a customer strategy review. Include slide titles, bullets, and speaker notes.
+```
+
+## Summarize emails with a connector
+
+Use this when you want Babbily to work with email or calendar context you authorize.
+
+<Steps>
+  <Step title="Connect the app">
+    Go to **Settings > Connectors** and connect Gmail or Outlook.
+  </Step>
+  <Step title="Ask naturally">
+    Tell Babbily what to find, who or what to search for, and what output you want.
+  </Step>
+  <Step title="Choose the output">
+    Ask for open questions, decisions, blockers, next steps, or a draft reply.
+  </Step>
+  <Step title="Approve actions carefully">
+    Review any send, update, or workspace action before approving it.
+  </Step>
+</Steps>
+
+```text
+Use Gmail to find the latest thread with this customer and summarize open questions, blockers, and suggested next steps.
+```
+
+## Create an image or video from source media
+
+Use this when you want a new visual asset, a variation, or a short video.
+
+<Steps>
+  <Step title="Choose a media-capable model or tool">
+    Select a model that supports image or video generation, or use **Manual** mode when the tool is available.
+  </Step>
+  <Step title="Attach source media if supported">
+    Add an eligible image or video when you want Babbily to use it as reference.
+  </Step>
+  <Step title="Describe the output">
+    Include subject, style, composition, motion, pacing, size, aspect ratio, and constraints.
+  </Step>
+  <Step title="Review and refine">
+    Save, download, or ask for another version.
+  </Step>
+</Steps>
+
+```text
+Use this image as reference and create a cleaner 16:9 version for a launch announcement. Keep the layout simple and bright.
+```
+
+## Translate and continue in chat
+
+Use this when you want a translation and then want Babbily to help with editing, replying, or planning.
+
+<Steps>
+  <Step title="Open Translate">
+    Open **Translate** from the sidebar.
+  </Step>
+  <Step title="Choose languages">
+    Select source and target languages, or use auto-detect when available.
+  </Step>
+  <Step title="Enter or dictate text">
+    Paste text or use voice dictation when your browser and device support it.
+  </Step>
+  <Step title="Choose a style">
+    Pick a tone or style chip when you want the translation to sound different.
+  </Step>
+  <Step title="Continue in chat">
+    Use **Continue in chat** to open a chat with the original and translated text as context.
+  </Step>
+</Steps>
+
+```text
+Rewrite this translated reply to sound polite, concise, and customer-ready.
+```
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="File attachments" icon="paperclip" href="/features/file-attachments">
+    Attach documents, images, audio, and video when a chat needs file context.
+  </Card>
+  <Card title="Connector capabilities" icon="list-checks" href="/features/connector-capabilities">
+    See what each connected app can help you find, reference, draft, or update.
+  </Card>
+  <Card title="Visual replies in chat" icon="chart-column" href="/features/visual-replies-in-chat">
+    Ask for maps, charts, stat cards, QR codes, citations, images, and videos.
+  </Card>
+  <Card title="API usage budget" icon="wallet" href="/features/usage-budget">
+    Understand how plan usage, resets, and heavier tasks work.
+  </Card>
+</CardGroup>

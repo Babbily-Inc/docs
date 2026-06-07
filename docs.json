@@ -25,6 +25,7 @@
         "icon": "rocket",
         "pages": [
           "quickstart",
+          "guides/task-recipes",
           "features/account-and-settings",
           "features/chat-and-models"
         ]
@@ -35,6 +36,7 @@
         "pages": [
           "features/file-attachments",
           "features/deep-research-and-search",
+          "features/visual-replies-in-chat",
           "features/news",
           "features/translate",
           "features/voice-dictation",
@@ -49,6 +51,7 @@
         "pages": [
           "features/memory",
           "features/tools-and-skills",
+          "features/built-in-tools-reference",
           "features/saved-prompts",
           "features/connectors",
           "features/connector-capabilities"
@@ -59,7 +62,8 @@
         "icon": "layout-dashboard",
         "pages": [
           "features/library-and-sharing",
-          "features/teams"
+          "features/teams",
+          "features/team-admin-guide"
         ]
       },
       {
@@ -68,14 +72,16 @@
         "pages": [
           "features/usage-budget",
           "features/billing-and-plans",
-          "features/privacy-and-data"
+          "features/privacy-and-data",
+          "features/data-controls-and-privacy-faq"
         ]
       },
       {
         "group": "Troubleshooting",
         "icon": "wrench",
         "pages": [
-          "troubleshooting/common-issues"
+          "troubleshooting/common-issues",
+          "troubleshooting/contact-support"
         ]
       },
       {

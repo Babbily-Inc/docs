@@ -1,0 +1,78 @@
+---
+title: "Contact support"
+description: "Learn what to include when you need help with Babbily and what sensitive details to leave out."
+icon: "life-buoy"
+---
+
+Contact support when you cannot resolve an issue from the product UI or the troubleshooting guides.
+
+<Card title="Open Babbily support" icon="life-buoy" href="https://support.babbily.com">
+  Use the support site for account, billing, connector, usage, memory, and product issues.
+</Card>
+
+## What to include
+
+The fastest support requests include enough context to reproduce or investigate the issue.
+
+| Include | Why it helps |
+| --- | --- |
+| Account email | Helps support find the correct account. |
+| Page or feature | Shows where the issue happened. |
+| What you expected | Makes the intended outcome clear. |
+| What happened instead | Shows the visible failure or confusing result. |
+| Approximate date, time, and timezone | Helps narrow the event window. |
+| Browser, device, and operating system | Helps identify environment-specific issues. |
+| Plan or team role | Helps explain billing, usage, and permission differences. |
+| Error text or screenshots | Shows the exact customer-visible state. |
+
+## What not to send
+
+Do not send:
+
+- Passwords.
+- Verification codes.
+- Private keys.
+- API keys.
+- Payment card numbers.
+- Government identifiers.
+- OAuth tokens or raw connected-app credentials.
+- Confidential files or chat content unless support specifically requests them through an approved support channel.
+
+<Warning>
+  Hide sensitive details in screenshots before sending them to support.
+</Warning>
+
+## Common support topics
+
+<AccordionGroup>
+  <Accordion title="Billing or plan issue">
+    Include the account email, plan name, team role, billing page you were viewing, what you expected, and any customer-visible error text. Team members should also ask the team owner to check owner-only billing controls.
+  </Accordion>
+
+  <Accordion title="Connector issue">
+    Include the connector name, whether it shows connected or pending, the action you tried, whether approval was requested, and whether your role in the connected app may limit access.
+  </Accordion>
+
+  <Accordion title="Memory issue">
+    Include whether the issue is about your Memory Profile, a memory citation, a chat reply that used outdated context, or a memory you cannot remove from **Settings > Memory**.
+  </Accordion>
+
+  <Accordion title="Usage issue">
+    Include the plan, approximate time of the model/tool/media action, what the usage card showed before and after, and whether you are part of a team workspace.
+  </Accordion>
+
+  <Accordion title="Image, video, or visual output issue">
+    Include the model, tool mode, prompt, file type if you attached source media, and whether the result failed, timed out, or returned text instead of the visual format you expected.
+  </Accordion>
+</AccordionGroup>
+
+## Useful links
+
+<CardGroup cols={2}>
+  <Card title="Common issues" icon="wrench" href="/troubleshooting/common-issues">
+    Try quick fixes for tools, connectors, memory, usage, media, translation, voice, news, and billing.
+  </Card>
+  <Card title="Data controls FAQ" icon="shield" href="/features/data-controls-and-privacy-faq">
+    Review privacy, memory, connector, sharing, Library, and account controls.
+  </Card>
+</CardGroup>
