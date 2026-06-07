@@ -25,6 +25,7 @@
         "icon": "rocket",
         "pages": [
           "quickstart",
+          "features/account-and-settings",
           "features/chat-and-models"
         ]
       },
@@ -34,6 +35,9 @@
         "pages": [
           "features/file-attachments",
           "features/deep-research-and-search",
+          "features/news",
+          "features/translate",
+          "features/voice-dictation",
           "features/image-and-video-generation",
           "features/context-window",
           "features/temporary-chat"
@@ -46,7 +50,8 @@
           "features/memory",
           "features/tools-and-skills",
           "features/saved-prompts",
-          "features/connectors"
+          "features/connectors",
+          "features/connector-capabilities"
         ]
       },
       {
