@@ -1,55 +1,38 @@
-# Mintlify Starter Kit
+# Babbily Help Center
 
-Use the starter kit to get your docs deployed and ready to customize.
+This repository powers the customer-facing Babbily documentation site.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+The site is built with [Mintlify](https://www.mintlify.com/docs). Pages are MDX files, and navigation, branding, and global settings live in `docs.json`.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## Local preview
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
+Install the Mintlify CLI, then run the preview from this repository root:
 
 ```bash
-npx skills add https://mintlify.com/docs
+pnpm add -g mint
+mint dev --no-open --port 3000
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+Open `http://localhost:3000` to review the docs locally.
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+## Validation
 
-## Development
+Run these checks before opening or updating a pull request:
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
+```bash
+mint validate
+mint broken-links --check-anchors --check-redirects --check-snippets
+mint a11y
 ```
 
-View your local preview at `http://localhost:3000`.
+## Writing standards
 
-## Publishing changes
+- Write for customers, not internal implementers.
+- Use second person and active voice.
+- Use Babbily UI labels exactly as they appear in the product.
+- Explain visible behavior, limits, privacy expectations, and user controls.
+- Do not document internal tables, private endpoints, environment variables, secrets, service-role behavior, implementation-only logs, or hidden provider wiring.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Publishing
 
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Make changes on a feature branch and open a pull request. Mintlify preview deployments should be used for review before merging to `main`.

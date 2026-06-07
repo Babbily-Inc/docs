@@ -1,82 +1,46 @@
 ---
 title: "Context window"
-description: "Track how much of a model's context window your chat is using and let Babbily auto-compact long threads so conversations keep flowing."
+description: "Understand the context indicator and how Babbily keeps long chats usable."
+icon: "circle-gauge"
 ---
 
-Every model Babbily uses has a fixed **context window**—the maximum amount of text (measured in tokens) it can consider in a single reply. As a chat grows, older messages, attachments, and tool output add up against that limit. Babbily shows you how close you are to the limit in real time and quietly compacts the conversation before it overflows.
+Every model has a context window. This is the amount of conversation, file content, and tool output the model can consider for one reply.
 
-## The context usage indicator
+Babbily shows a context indicator near the composer so you can see how full the current chat is.
 
-A small ring next to the composer shows how much of the current model's context window your thread is using. Hover or tap it to see the full breakdown:
+## What the indicator means
 
-- **Used** — percent of the context window consumed by the conversation so far.
-- **Usage** — exact tokens used out of the model's total context window.
-- **Remaining** — tokens still available for your next message and Babbily's reply.
-- **Auto compact** — the token threshold (80% of the window) at which Babbily will summarize older messages.
+The context indicator estimates how much of the active model's window your chat is using.
 
-The ring changes color as you approach the limit:
+- **Used** shows the percentage consumed.
+- **Usage** shows used tokens out of the model's window.
+- **Remaining** shows the approximate space left for the next message and reply.
+- **Auto compact** shows when Babbily may summarize older parts of the chat.
 
-- **Neutral** — under 80% used.
-- **Amber** — at or above 80%; auto-compaction will run before your next long reply.
-- **Red** — at capacity. New messages may be rejected until you compact or start a new thread.
-
-The indicator updates after every message and after attachments are added, so the number you see always reflects the prompt Babbily is about to send.
+The indicator updates as you send messages, attach files, receive replies, and switch models.
 
 ## Automatic compaction
 
-When a thread crosses 80% of the model's context window, Babbily summarizes the earlier portion of the conversation in the background and replaces it with a compact summary. Your message history stays visible in the UI, and a divider labeled **Context automatically compacted** marks the point where the summary takes over.
+When a long chat approaches the model's limit, Babbily can compact older conversation history into a shorter summary. Your visible chat history remains available, and the current conversation can keep going.
 
-Compaction:
+Compaction helps:
 
-- Runs automatically the next time you send a message past the threshold.
-- Preserves the most recent messages verbatim so recent context is never lost.
-- Is also triggered when you switch to a model with a smaller context window mid-thread, so the conversation fits the new model's limit.
+- Preserve recent messages in detail.
+- Keep the thread within the active model's limit.
+- Continue long-running work without forcing a new chat immediately.
 
-You do not need to enable anything—auto-compaction is on by default for every chat.
+<Note>
+  A compacted summary is still part of the model's context. Your usage percentage may drop, but it will not reset to zero.
+</Note>
 
-### How compaction affects the usage indicator
+## Switching models
 
-After a thread is compacted, the context usage indicator counts the compaction summary as part of the prompt Babbily sends to the model—because that's exactly what happens behind the scenes. As a result:
+Different models support different context sizes. If you switch to a smaller model, Babbily recalculates the thread against that model's limit. If needed, Babbily may compact the thread before the next reply.
 
-- Usage does not drop to zero after compaction; it reflects the summary plus any messages sent since.
-- The summary's size grows with how much history it represents, so very long threads stay above zero even right after a fresh compaction.
-- If usage climbs back to 80% later in the same thread, Babbily compacts again, replacing the previous summary with an updated one.
+## When a chat gets too full
 
-This keeps the percentage you see honest: it is always the share of the window your next reply will actually consume.
-
-## What to do when the window fills up
-
-If a chat reaches the limit before compaction can catch up, Babbily shows a **Context window is full** prompt above the composer with a **New thread** button. From there you can:
-
-- **Start a new thread** to continue the conversation with a fresh window. Memory and connectors still apply.
-- **Dismiss** the prompt and keep reading—history remains available, but new replies are paused until you start a new thread or switch to a model with a larger window.
+If a thread reaches the limit, Babbily may ask you to start a new thread. Memory and connectors can still help you carry important context forward.
 
 <Tip>
-  Long file attachments and tool output (web search results, deep research, large code blocks) consume the most context. If you hit the limit often, attach files only when you need them and clear out tool results you no longer need by starting a new thread.
+  Long files, deep research output, and pasted code can fill context quickly. Start a new thread when your topic changes or when you no longer need earlier details.
 </Tip>
-
-## Switching models mid-thread
-
-Different models have very different window sizes. When you switch models, Babbily recalculates the usage against the new model's limit:
-
-- If the existing thread fits, nothing changes.
-- If it does not, Babbily compacts the conversation to make room before the next reply.
-
-This means you can move from a large-context model to a smaller, faster one without losing the thread.
-
-## FAQ
-
-<AccordionGroup>
-  <Accordion title="Do tokens count against my API usage budget?">
-    Context tokens are part of each model call's cost, which is already deducted from your monthly [API usage budget](/features/usage-budget). The context indicator tracks the model's window; the budget card tracks your dollar spend.
-  </Accordion>
-  <Accordion title="Can I turn off auto-compaction?">
-    No. Auto-compaction is required to keep long threads from breaking when they exceed the model's window. If you want to start fresh, open a new thread instead.
-  </Accordion>
-  <Accordion title="Will compaction change my answers?">
-    Compaction replaces older turns with a summary, so very specific details from early in a long chat may be condensed. Recent messages are kept in full. For high-fidelity work, start a new thread when you switch topics.
-  </Accordion>
-  <Accordion title="Why does the percentage change after I attach a file?">
-    Attachments are counted toward the prompt Babbily sends to the model, so adding or removing a file updates the indicator immediately.
-  </Accordion>
-</AccordionGroup>
