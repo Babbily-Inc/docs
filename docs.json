@@ -25,6 +25,10 @@
         "icon": "rocket",
         "pages": [
           "quickstart",
+          "features/account-access",
+          "guides/glossary",
+          "guides/role-based-getting-started",
+          "guides/admin-rollout-checklist",
           "guides/task-recipes",
           "guides/prompting-patterns",
           "features/account-and-settings",
@@ -56,6 +60,7 @@
           "features/tools-and-skills",
           "features/built-in-tools-reference",
           "features/saved-prompts",
+          "features/saved-prompts-examples",
           "features/connectors",
           "features/connector-capabilities",
           "features/connector-deep-dives"
@@ -77,16 +82,25 @@
         "pages": [
           "features/usage-budget",
           "features/billing-and-plans",
+          "features/billing-and-plan-changes-faq",
+          "features/admin-and-procurement-faq",
+          "features/security-and-procurement",
           "features/privacy-and-data",
           "features/data-controls-and-privacy-faq",
-          "features/trust-safety-and-data-boundaries"
+          "features/trust-safety-and-data-boundaries",
+          "features/data-export-and-deletion",
+          "features/accessibility-and-supported-environments"
         ]
       },
       {
         "group": "Troubleshooting",
         "icon": "wrench",
         "pages": [
+          "troubleshooting/login-and-invite-troubleshooting",
           "troubleshooting/known-limits-and-expectations",
+          "troubleshooting/browser-device-and-file-support",
+          "troubleshooting/service-status-and-degraded-behavior",
+          "troubleshooting/connector-troubleshooting",
           "troubleshooting/common-issues",
           "troubleshooting/contact-support"
         ]

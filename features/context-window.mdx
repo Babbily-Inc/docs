@@ -10,10 +10,10 @@ Babbily shows a context indicator near the composer so you can see how full the 
 
 ## What the indicator means
 
-The context indicator estimates how much of the active model's window your chat is using.
+The context indicator estimates how much of the active model's window your chat is using. The details are approximate because models count conversation, file, and tool context differently.
 
 - **Used** shows the percentage consumed.
-- **Usage** shows used tokens out of the model's window.
+- **Usage** shows the estimated context used out of the model's window.
 - **Remaining** shows the approximate space left for the next message and reply.
 - **Auto compact** shows when Babbily may summarize older parts of the chat.
 
@@ -21,7 +21,7 @@ The indicator updates as you send messages, attach files, receive replies, and s
 
 ## Automatic compaction
 
-When a long chat approaches the model's limit, Babbily can compact older conversation history into a shorter summary. Your visible chat history remains available, and the current conversation can keep going.
+In saved chats, when a long thread approaches the selected model's limit, Babbily can compact older conversation history into a shorter summary. Your visible chat history remains available, and the current conversation can keep going.
 
 Compaction helps:
 
@@ -32,6 +32,8 @@ Compaction helps:
 <Note>
   A compacted summary is still part of the model's context. Your usage percentage may drop, but it will not reset to zero.
 </Note>
+
+Temporary Chats do not use automatic compaction. If they reach the limit, start a saved thread to continue.
 
 ## Switching models
 

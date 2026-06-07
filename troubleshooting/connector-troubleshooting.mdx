@@ -1,0 +1,83 @@
+---
+title: "Connector troubleshooting"
+description: "Fix connector setup, authorization, preparation, permission, approval, and incomplete-result issues."
+icon: "plug-zap"
+---
+
+Use this guide when a connector is missing, stuck, disconnected, or returning less context than expected.
+
+## Connector status meanings
+
+| Status | What it usually means | What to try |
+| --- | --- | --- |
+| Not connected | The app has not been authorized for your account. | Choose the connector and start setup. |
+| Set up | The connector needs additional setup information. | Finish the setup flow and return to Babbily. |
+| Authorize | The connector needs you to sign in or approve access. | Choose **Authorize** and complete the app flow. |
+| Connected | Babbily can use the connector when the model, tool mode, and permissions allow it. | Ask for the app by name or choose it manually. |
+| Preparing tools | Babbily is finishing connector readiness after authorization. | Wait a moment, refresh, then try again. |
+| Error | Setup or tool readiness failed. | Refresh, reconnect, or contact support if it repeats. |
+| Expired or revoked | Authorization no longer works. | Reconnect the app or approve access again. |
+| Pending | Setup is still finishing. | Wait a moment and refresh **Settings > Connectors**. |
+
+## If setup does not open
+
+<Steps>
+  <Step title="Allow pop-ups">
+    Allow pop-ups for Babbily, then choose **Authorize** again.
+  </Step>
+  <Step title="Finish the app flow">
+    Sign in to the connected app and approve the permissions you are comfortable granting.
+  </Step>
+  <Step title="Return to Babbily">
+    Go back to **Settings > Connectors** and wait for the status to refresh.
+  </Step>
+  <Step title="Try the connector in chat">
+    Ask for the connected app by name, choose it from the composer, mention it with `@`, or use `/` when connector-specific commands are available.
+  </Step>
+</Steps>
+
+## If Babbily cannot find something
+
+Connector answers depend on what your connected-app account can access.
+
+Try:
+
+- Name the app, folder, channel, project, repository, board, person, or time window.
+- Confirm you can open the item directly in the connected app.
+- Check whether your app role has permission to view it.
+- Use **Manual** mode and choose the connector directly.
+- Reconnect if your app permissions recently changed.
+
+## If an action needs approval
+
+Some connector actions ask for approval before running. Review the content and destination before approving:
+
+- Recipients and subject lines.
+- Documents, sheets, slides, pages, tasks, or records being changed.
+- Billing, customer, payment, or support context.
+- Automations or workflow changes.
+
+<Warning>
+  Do not approve a connector action unless you understand what it will do.
+</Warning>
+
+## If you want to remove access
+
+Use **Settings > Connectors** to disconnect apps where controls are available. If you cannot remove access from Babbily, revoke access in the connected app's own settings and contact support if you still need help.
+
+Removing connector access does not delete content inside the connected app.
+
+<CardGroup cols={2}>
+  <Card title="Connectors" icon="plug" href="/features/connectors">
+    Connect apps and understand approval-required actions.
+  </Card>
+  <Card title="Connector capabilities" icon="list-checks" href="/features/connector-capabilities">
+    See what each connector can help you find, reference, draft, or update.
+  </Card>
+  <Card title="Data controls FAQ" icon="shield" href="/features/data-controls-and-privacy-faq">
+    Review connector privacy and access controls.
+  </Card>
+  <Card title="Contact support" icon="life-buoy" href="/troubleshooting/contact-support">
+    Learn what to include when a connector still fails.
+  </Card>
+</CardGroup>

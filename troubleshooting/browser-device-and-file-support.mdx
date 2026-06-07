@@ -1,0 +1,99 @@
+---
+title: "Browser, device, and file support"
+description: "Troubleshoot browser permissions, device behavior, voice input, attachments, and unsupported files."
+icon: "monitor-smartphone"
+---
+
+Babbily works across modern web browsers and supported app surfaces, but some features depend on browser permissions, device capabilities, the selected model, and your account state.
+
+## Quick checks
+
+| Issue | What to check |
+| --- | --- |
+| Microphone does not start | Browser or app microphone permission, another app using the microphone, device support. |
+| Connector window does not open | Pop-up permissions for Babbily and whether the authorization window was blocked. |
+| File upload is hidden | Selected model file support and your current account state. |
+| File says unsupported | File type, selected model, and whether the model supports that file category. |
+| Media generation asks for a file | Whether the selected media model requires source media. |
+| Page looks stale | Refresh Babbily after changing permissions, plans, models, or connected apps. |
+
+## File support basics
+
+File support is model-dependent. Depending on the selected model, Babbily can show upload controls for:
+
+- Images.
+- Documents.
+- Audio.
+- Video.
+
+Document uploads from the file picker can include common text and document formats such as `.txt`, `.js`, `.ts`, `.tsx`, `.py`, `.html`, `.css`, `.json`, `.csv`, `.md`, `.pdf`, `.doc`, and `.docx`.
+
+Image uploads generally work best as PNG, JPG/JPEG, or WebP when the model needs to read the image. Other image, audio, or video files may appear in the picker when the selected model supports that broad category, but not every model can read every format.
+
+<Note>
+  The model picker and composer controls are the best source of truth for what your current chat can attach.
+</Note>
+
+## If a file will not upload or send
+
+Try these steps:
+
+<Steps>
+  <Step title="Switch models">
+    Choose a model that supports the file category you need.
+  </Step>
+  <Step title="Try one file first">
+    Add the most relevant file before adding more context.
+  </Step>
+  <Step title="Convert the file">
+    If a document or image fails, try a common format such as PDF, DOCX, TXT, CSV, PNG, JPG, or WebP.
+  </Step>
+  <Step title="Shorten the input">
+    Large files can fill the context window or fail if the selected model cannot handle them.
+  </Step>
+  <Step title="Start a new thread">
+    Use a clean thread when older files or instructions are no longer relevant.
+  </Step>
+</Steps>
+
+## Voice dictation
+
+Voice dictation depends on browser support, device support, microphone permission, and account state. Some app surfaces may use a transcription flow when browser speech input is unavailable.
+
+If dictation fails:
+
+- Allow microphone access.
+- Close other apps that may be using the microphone.
+- Try a shorter recording.
+- Refresh Babbily after changing permissions.
+- Type or paste text if your current browser or device does not support dictation.
+
+<Warning>
+  Review dictated text before sending it. Transcription can misunderstand names, numbers, accents, or technical terms.
+</Warning>
+
+## Connector authorization windows
+
+Some connector setup flows open a separate authorization window and then return you to Babbily.
+
+If the window does not open:
+
+- Allow pop-ups for Babbily.
+- Choose **Authorize** again.
+- Complete the authorization flow in the app you are connecting.
+- Return to **Settings > Connectors** and refresh.
+
+<CardGroup cols={2}>
+  <Card title="File attachments" icon="paperclip" href="/features/file-attachments">
+    Learn how to attach files and get better file results.
+  </Card>
+  <Card title="Voice dictation" icon="mic" href="/features/voice-dictation">
+    Use the microphone in Chat and Translate.
+  </Card>
+  <Card title="Connector troubleshooting" icon="plug" href="/troubleshooting/connector-troubleshooting">
+    Fix connector setup, authorization, status, and permissions.
+  </Card>
+  <Card title="Known limits" icon="wrench" href="/troubleshooting/known-limits-and-expectations">
+    Understand why behavior can vary by model, file, plan, usage, and account state.
+  </Card>
+</CardGroup>

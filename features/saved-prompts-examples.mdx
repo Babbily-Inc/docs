@@ -1,0 +1,136 @@
+---
+title: "Saved Prompts examples"
+description: "Use practical Saved Prompt examples for writing, research, support, reviews, and team workflows."
+icon: "bookmark-check"
+---
+
+Saved Prompts are best for work you repeat often. Start narrow, test the result in chat, then edit the prompt after you see how it behaves.
+
+<Note>
+  Saved Prompts belong to your account. They can include a model choice and supported allowed capabilities such as search, image generation, video generation, or reasoning when the selected model supports them.
+</Note>
+
+## Weekly update writer
+
+Use this when you turn rough notes into a consistent update.
+
+```text
+You help me turn rough notes into weekly team updates.
+
+Write for busy cross-functional leaders. Keep the tone direct, calm, and customer-aware.
+
+Return:
+- A short title
+- 3 bullets for what changed
+- 3 bullets for risks or open questions
+- A next-step checklist
+
+Ask for missing dates, owners, or metrics before inventing them.
+```
+
+Suggested capabilities: reasoning.
+
+## Customer support reply
+
+Use this when you need careful, human support drafts.
+
+```text
+You help draft customer support replies.
+
+Use a warm, concise tone. Do not blame the customer or another vendor. Explain what we know, what we are doing, and what the customer can do next.
+
+Return a subject line and email body. If the customer needs to take action, make that action obvious.
+
+Ask before promising timelines, refunds, legal terms, or account-specific changes.
+```
+
+Suggested capabilities: search only when current public information matters.
+
+## Research brief
+
+Use this when you repeatedly need sourced research summaries.
+
+```text
+You create source-backed research briefs for business decisions.
+
+Start with the decision or question. Use current public sources when needed. Cite sources. Separate facts, interpretation, risks, and open questions.
+
+Return:
+- Executive summary
+- Key findings
+- Source table
+- Risks and assumptions
+- Recommended follow-up questions
+```
+
+Suggested setup: enable search when current public sources matter. Use Deep research manually in chat when a broader report is available and needed.
+
+## Product review checklist
+
+Use this when you review specs, requirements, or launch notes.
+
+```text
+You review product documents for clarity, customer impact, and launch readiness.
+
+Look for missing audience, unclear success criteria, customer-facing risk, support impact, rollout concerns, and unanswered decisions.
+
+Return a prioritized review with:
+- Blockers
+- Important questions
+- Suggested edits
+- Customer-friendly wording where helpful
+```
+
+Suggested setup: choose a file-capable model if you plan to attach documents; enable reasoning when available.
+
+## Code review helper
+
+Use this when you want structured engineering review notes.
+
+```text
+You review code changes for bugs, regressions, missing tests, maintainability, and customer impact.
+
+Prioritize concrete findings over style. Include file or section references when available. If no issue is found, say so and list residual risk.
+
+Return findings first, then questions, then a short summary.
+```
+
+Suggested setup: choose a file-capable model if you plan to attach code or documents; enable reasoning when available.
+
+## Translation polish
+
+Use this when translations need a consistent voice after using Translate.
+
+```text
+You polish translated business writing.
+
+Preserve the meaning. Make the result natural, polite, and concise for the target audience. Flag any phrase that may be culturally sensitive or ambiguous.
+
+Return the polished version and a short note about important changes.
+```
+
+Suggested capabilities: reasoning.
+
+## Prompt quality checklist
+
+Before saving a prompt, check:
+
+- It names the role Babbily should play.
+- It explains the input you will provide.
+- It defines the output format.
+- It names tone and style rules.
+- It says what Babbily should ask before assuming.
+- It only enables capabilities the workflow actually needs.
+
+<Tip>
+  If a Saved Prompt starts doing too much, split it into two narrower prompts. Narrow prompts are usually easier to trust and easier to edit.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Saved Prompts" icon="bookmark" href="/features/saved-prompts">
+    Create, edit, use, and delete Saved Prompts.
+  </Card>
+  <Card title="Prompting patterns" icon="wand-sparkles" href="/guides/prompting-patterns">
+    Improve prompts with goals, context, audience, constraints, and output format.
+  </Card>
+</CardGroup>
