@@ -1,0 +1,168 @@
+---
+title: "Built-in tools reference"
+description: "Learn when to use Babbily's built-in tools for search, research, site maps, weather, QR codes, media, and more."
+icon: "wrench"
+---
+
+Babbily includes built-in tools that help a chat do more than answer from the selected model alone. Use this reference when you want to choose a tool manually or understand why Babbily used one in **Auto** mode.
+
+<Note>
+  Tool availability can vary by model, plan, remaining API usage budget, account state, and tool mode. If a tool is hidden, try a supported model, switch from **Off** to **Auto** or **Manual**, and check your usage.
+</Note>
+
+## Choose a tool mode
+
+| Mode | What it does | Use it when |
+| --- | --- | --- |
+| **Auto** | Babbily decides which available tools fit your request. | You want the fastest path and do not need to force a tool. |
+| **Manual** | You choose the exact tool, connector, or skill for the next reply. | You know the answer needs search, research, media, or a specific app. |
+| **Off** | Babbily answers without tools. | You want a model-only draft, brainstorm, rewrite, or quick answer. |
+
+## Built-in tools
+
+<AccordionGroup>
+  <Accordion title="Web search">
+    Use web search for focused questions that need current public sources.
+
+    Good uses include vendor pricing, product comparisons, recent news, current policies, public facts, and source-backed summaries.
+
+    Try:
+
+    ```text
+    Search the web for recent public announcements from these companies and cite sources.
+    ```
+
+    Search can fail or return limited results if the topic is hard to find, access is blocked, or the selected model does not support the tool. Verify high-stakes answers with authoritative sources.
+  </Accordion>
+
+  <Accordion title="Deep research">
+    Use deep research when you need a broader, multi-source report instead of a quick lookup.
+
+    Good uses include competitive briefs, policy research, vendor comparisons, market landscapes, and strongest-argument summaries.
+
+    Try:
+
+    ```text
+    Do deep research on this market and return a sourced brief with key players, risks, and open questions.
+    ```
+
+    Deep research can take longer than a normal reply and may use more API usage budget.
+  </Accordion>
+
+  <Accordion title="Site map">
+    Use site map to inventory, review, or summarize public pages on a website.
+
+    Good uses include finding product pages, checking documentation coverage, auditing public links, or discovering what a public site contains.
+
+    Try:
+
+    ```text
+    Map this public website and summarize the main product, pricing, and docs pages.
+    ```
+
+    Site map reviews website structure. It does not map geographic places. Private, login-only, blocked, or heavily dynamic pages may be incomplete.
+  </Accordion>
+
+  <Accordion title="Finance research">
+    Use finance research for company, market, earnings, filings, peer, or financial-topic research.
+
+    Good uses include public company summaries, earnings context, market comparisons, historical context, and financial source review.
+
+    Try:
+
+    ```text
+    Research this public company and summarize recent earnings, major risks, and peer context.
+    ```
+
+    Finance research is informational and should not be treated as financial advice.
+  </Accordion>
+
+  <Accordion title="Weather">
+    Use weather for current conditions and short forecasts by location.
+
+    Good uses include travel planning, event planning, quick local checks, and comparing forecast windows.
+
+    Try:
+
+    ```text
+    Show the 5-day forecast for Denver in Fahrenheit.
+    ```
+
+    Weather results depend on whether the location can be resolved and current public weather data is available. Do not rely on Babbily for safety-critical weather decisions.
+  </Accordion>
+
+  <Accordion title="Stats">
+    Use stats when you want a compact statistical result or metric-style card.
+
+    Good uses include quick public metric checks, small KPI summaries, and stat-card style answers when the needed values are clear.
+
+    Try:
+
+    ```text
+    Show a compact stats card for these quarterly numbers: Q1 120, Q2 175, Q3 160, Q4 210.
+    ```
+
+    Stats is not a full spreadsheet engine. For row-by-row analysis, attach a file or use a connected spreadsheet app when available.
+  </Accordion>
+
+  <Accordion title="QR code">
+    Use QR code to create a scannable image from a public link or non-sensitive text.
+
+    Good uses include event links, public landing pages, signup forms, and simple labels.
+
+    Try:
+
+    ```text
+    Create a QR code for https://babbily.com.
+    ```
+
+    Anyone who can scan the QR code can read the encoded content. Do not put passwords, verification codes, private keys, payment details, or confidential information in a QR code.
+  </Accordion>
+
+  <Accordion title="Image generation">
+    Use image generation to create or edit images from a prompt when your selected model and plan support it.
+
+    Good prompts describe subject, style, composition, lighting, aspect ratio, and constraints.
+
+    Try:
+
+    ```text
+    Create a clean 16:9 illustration of a collaborative AI workspace, bright office lighting, minimal background.
+    ```
+
+    Image generation can take longer than text replies and usually uses more API usage budget. Review generated media before using it publicly.
+  </Accordion>
+
+  <Accordion title="Video generation">
+    Use video generation to create, animate, or edit short videos when your selected model and plan support it.
+
+    Good prompts describe the subject, movement, pacing, duration, and source media when supported.
+
+    Try:
+
+    ```text
+    Create a short video of a dashboard animating from an empty state to a completed weekly report.
+    ```
+
+    Video generation can take minutes, uses more API usage budget than many text replies, and may vary by model, file type, duration, and account state.
+  </Accordion>
+</AccordionGroup>
+
+## Why a tool may be missing
+
+Try these checks:
+
+- Switch to a model that supports the tool.
+- Change tool mode from **Off** to **Auto** or **Manual**.
+- Check your remaining API usage budget.
+- Remove conflicting file types or unsupported source media.
+- Reconnect an app if the missing option is a connector.
+
+<CardGroup cols={2}>
+  <Card title="Tools and skills" icon="wand-sparkles" href="/features/tools-and-skills">
+    Learn how tools, skills, slash commands, and manual mode work together.
+  </Card>
+  <Card title="Visual replies in chat" icon="chart-column" href="/features/visual-replies-in-chat">
+    See how Babbily can show maps, charts, weather, QR codes, media, and citations.
+  </Card>
+</CardGroup>

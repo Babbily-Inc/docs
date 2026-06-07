@@ -1,0 +1,92 @@
+---
+title: "Visual replies in chat"
+description: "Ask Babbily for maps, charts, stat cards, weather, QR codes, code diffs, citations, images, and videos."
+icon: "chart-column"
+---
+
+Babbily can show more than plain text when a visual answer helps. Depending on the model, tool mode, plan, and your request, replies can include maps, charts, stat cards, weather cards, QR codes, code blocks, code diffs, citations, images, and videos.
+
+<Tip>
+  Be direct about the format you want. For example: "Show this as a bar chart," "Create a QR code," or "Map these locations."
+</Tip>
+
+## What Babbily can show
+
+| Visual reply | Best for | Example prompt |
+| --- | --- | --- |
+| Map | Specific places, routes, or location lists. | `Map these public city offices: Denver, Boulder, Fort Collins.` |
+| Chart | Labeled numeric data, comparisons, trends, and breakdowns. | `Make a bar chart from: Q1 120, Q2 175, Q3 160.` |
+| Stat card | A small set of clear metrics or KPIs. | `Show these numbers as compact stats cards.` |
+| Weather card | Current weather and short forecasts. | `Show the 5-day forecast for Denver in Fahrenheit.` |
+| QR code | Public links or non-sensitive text. | `Create a QR code for https://babbily.com.` |
+| Code diff | Clear before-and-after code changes. | `Show the proposed change as a code diff.` |
+| Citations | Search, research, and source-backed answers. | `Search recent public sources and cite them.` |
+| Image or video | Generated media from prompts or supported source files. | `Create a 16:9 product illustration.` |
+
+## Ask for a map
+
+Maps work best when you give Babbily clear locations.
+
+Good prompts:
+
+- `Map these office locations and label each one.`
+- `Show a map of these addresses and summarize the travel pattern.`
+- `Find public locations for these venues and map them.`
+
+If Babbily returns text instead of a map, make the locations more specific or ask again with "show this as a map."
+
+## Turn data into charts or stat cards
+
+Charts need clean labels and numbers. Stat cards work well for a small group of headline metrics.
+
+<Steps>
+  <Step title="Provide the data">
+    Paste a small table, attach a file, or describe the values clearly.
+  </Step>
+  <Step title="Name the visual">
+    Ask for a bar chart, line chart, pie chart, table, or stat cards.
+  </Step>
+  <Step title="State the comparison">
+    Tell Babbily what matters: trend, ranking, percent change, totals, or outliers.
+  </Step>
+</Steps>
+
+```text
+Create a line chart for monthly signups: Jan 120, Feb 155, Mar 171, Apr 205. Add a short trend summary.
+```
+
+## Create a QR code
+
+Use QR codes for public links and non-sensitive text.
+
+<Warning>
+  Do not put passwords, verification codes, private keys, payment details, or confidential information in a QR code. Anyone who can scan the image can read what it contains.
+</Warning>
+
+## Review sources and media
+
+Search and research replies can include citations so you can open source material directly. Generated images and videos may include save, download, preview, or fullscreen controls depending on the output and your account state.
+
+<CardGroup cols={2}>
+  <Card title="Deep research and search" icon="search" href="/features/deep-research-and-search">
+    Learn when to use search and deep research for source-backed answers.
+  </Card>
+  <Card title="Image and video generation" icon="image" href="/features/image-and-video-generation">
+    Create media with better prompts and understand usage impact.
+  </Card>
+</CardGroup>
+
+## Troubleshooting visual replies
+
+If a visual reply does not appear:
+
+- Ask for the format explicitly.
+- Switch to a model that supports the visual or tool you need.
+- Use **Manual** mode and choose the relevant tool.
+- Provide cleaner labels, values, locations, or source files.
+- Check your API usage budget before running image or video generation again.
+- Verify important outputs against the original data or cited source.
+
+<Note>
+  Babbily may answer in text when the requested visual is unsupported, the data is not structured enough, or the selected model cannot use the needed tool.
+</Note>
