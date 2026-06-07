@@ -8,15 +8,18 @@ Attachments let Babbily use file context in a chat. You can attach supported fil
 
 ## What you can attach
 
-Supported file behavior depends on the selected model. Depending on the model, Babbily can work with:
+File controls appear only when the selected model supports that kind of input. Depending on the model, Babbily can work with:
 
 - Images.
 - Documents.
 - Audio.
 - Video.
-- Other uploaded files that the model can read or reference.
 
-If a file type is not available, switch to a model with the right file support.
+Document uploads from the file picker can include common text and document formats such as `.txt`, `.js`, `.ts`, `.tsx`, `.py`, `.html`, `.css`, `.json`, `.csv`, `.md`, `.pdf`, `.doc`, and `.docx`.
+
+Image uploads generally work best as PNG, JPG/JPEG, or WebP when the model needs to read the image. Other broad file categories may appear when the selected model supports them, but not every model can read every format.
+
+If a file type is hidden or rejected, switch to a model with the right file support or convert the file to a common format.
 
 ## Attach a file
 
@@ -41,11 +44,17 @@ If a file type is not available, switch to a model with the right file support.
 
 ## Tips for better file results
 
+- Choose a model that supports the file category before attaching.
 - Ask for the output format you want.
 - Mention which part of the file matters most.
 - Use one or a few relevant files instead of attaching everything.
+- Convert unusual files to a common format if the upload is rejected.
 - Start a new thread when the file is no longer relevant.
 
 <Warning>
   Do not upload passwords, API keys, private keys, payment card numbers, or other secrets. Only attach files you are allowed to use in Babbily.
 </Warning>
+
+<Card title="Browser, device, and file support" icon="monitor-smartphone" href="/troubleshooting/browser-device-and-file-support">
+  Troubleshoot unsupported files, browser permissions, device behavior, and voice input.
+</Card>

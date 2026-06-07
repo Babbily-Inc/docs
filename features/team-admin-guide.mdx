@@ -15,6 +15,7 @@ Use this guide if you own or help manage a Babbily team workspace.
 | Role | What they can usually do |
 | --- | --- |
 | Team owner | Manage the workspace, invitations, member removal, plan changes, billing, and team usage. |
+| Team manager | May appear in some team role views where available. Controls can vary by account and plan. |
 | Team member | Use the team plan, view team information, and work in Babbily with their own account. |
 
 Team members may see plan and usage information, but subscription changes and owner-level billing actions belong to the team owner.
@@ -45,7 +46,7 @@ After an invitation is sent:
 - Pending invitations can be reviewed from team settings.
 - Invitees join after accepting the invitation.
 - Accepted members receive access to the team plan and team API usage budget.
-- Pending invitations do not receive team access or usage until accepted.
+- Pending invitations do not receive team access or usage until accepted, but may affect billed seats until accepted, declined, or canceled.
 
 ## Manage members and invitations
 
@@ -63,7 +64,7 @@ If a recent billing change is not visible yet, refresh settings and check again 
 
 ## Team API usage budget
 
-Team plans include API usage budget for accepted users. Team members follow the team plan's reset timing.
+Team seats are billed separately from usage availability. Accepted team members receive the team plan's included API usage budget and follow the team plan reset timing.
 
 If a team workspace runs out of included usage:
 
@@ -87,6 +88,9 @@ If a team control is missing:
   </Card>
   <Card title="Billing and plans" icon="credit-card" href="/features/billing-and-plans">
     Understand plan controls and billing visibility.
+  </Card>
+  <Card title="Admin and procurement FAQ" icon="briefcase-business" href="/features/admin-and-procurement-faq">
+    Review SSO, analytics, priority support, privacy, and procurement questions.
   </Card>
   <Card title="API usage budget" icon="wallet" href="/features/usage-budget">
     See how usage works for individuals and teams.

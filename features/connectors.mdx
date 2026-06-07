@@ -23,7 +23,7 @@ Connectors let Babbily use context from the apps you already work in. You can as
 | Connector | What you can use it for |
 | --- | --- |
 | Google Drive | Search and reference files. |
-| Gmail | Find email threads, summarize messages, and prepare approved email actions. |
+| Gmail | Find email threads, summarize messages, and prepare email drafts or other approval-required actions when available. |
 | Google Sheets | Read, update, and format spreadsheet data. |
 | Google Docs | Create, search, and update documents. |
 | Google Slides | Create, inspect, and update presentations. |
@@ -56,9 +56,11 @@ Connectors let Babbily use context from the apps you already work in. You can as
     Follow the sign-in or setup flow for that app. Babbily shows the connector as connected when setup finishes.
   </Step>
   <Step title="Use it in chat">
-    Ask in plain language, choose the connector manually, or type `/` to find connector commands.
+    Ask in plain language, choose a connected app from the composer, mention it with `@`, or type `/` when connector-specific commands are available.
   </Step>
 </Steps>
+
+After authorization, a connector may briefly prepare tools before it is ready in chat.
 
 ## Approve actions before they run
 
@@ -72,6 +74,10 @@ You can approve or cancel from the composer. If the action includes editable con
 
 ## Disconnect an app
 
-Use **Settings > Connectors** to manage connected apps where controls are available. If you do not see a disconnect option, revoke access from the connected app's own settings and contact support if you still need help.
+Use **Settings > Connectors** to disconnect apps where controls are available. If you do not see a disconnect option, revoke access from the connected app's own settings and contact support if you still need help.
 
 Removing connector access does not delete content inside the connected app.
+
+<Card title="Connector troubleshooting" icon="plug-zap" href="/troubleshooting/connector-troubleshooting">
+  Fix setup, authorization, preparation, permission, and approval issues.
+</Card>
