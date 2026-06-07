@@ -72,6 +72,13 @@
         "pages": [
           "troubleshooting/common-issues"
         ]
+      },
+      {
+        "group": "Changelog",
+        "icon": "rss",
+        "pages": [
+          "changelog/overview"
+        ]
       }
     ],
     "global": {
