@@ -1,96 +1,63 @@
 ---
 title: "Connectors"
-description: "Link Gmail, Google Drive, Notion, GitHub, and other apps so Babbily can pull live context into your chats."
+description: "Connect workspace apps so Babbily can use live context and prepare approved actions."
+icon: "plug"
 ---
 
-Connectors let Babbily reach into the tools you already use—email, files, calendars, code, customer data—and bring that context into a conversation. When a connector is on, Babbily can search, summarize, and take actions inside the linked app while you chat.
-
-## When to use connectors
-
-Turn on a connector when you want Babbily to:
-
-- Reference live data from another app (for example, "summarize the threads in my inbox from Acme this week").
-- Draft an action against a connected app (for example, an email reply or a calendar invite) before you send it.
-- Pull project, file, or repo context into a conversation without copy-pasting.
-
-If you only want a general chat or web search, you do not need to connect anything.
+Connectors let Babbily use context from the apps you already work in. You can ask about email, files, calendars, docs, spreadsheets, projects, code, customer conversations, deployments, billing, and more.
 
 ## Available connectors
 
-| App | What Babbily can do |
+| Connector | What you can use it for |
 | --- | --- |
-| Gmail | Find and summarize email conversations. |
-| Outlook | Find email and calendar context from Outlook. |
-| Google Drive | Search and reference files from Drive. |
-| Google Docs | Create, search, and update collaborative documents. |
-| Google Sheets | Read, write, and format spreadsheet data. |
+| Google Drive | Search and reference files. |
+| Gmail | Find email threads, summarize messages, and prepare approved email actions. |
+| Google Sheets | Read, update, and format spreadsheet data. |
+| Google Docs | Create, search, and update documents. |
 | Google Slides | Create, inspect, and update presentations. |
-| Google Calendar | Use calendar events and schedule context. |
-| Excel | Work with spreadsheets, tables, formulas, and charts. |
-| Microsoft Teams | Use chats, channels, and meeting context from Teams. |
-| Slack | Reference channels, threads, and team messages. |
-| Notion | Search pages, databases, and workspace notes. |
-| Asana | Use tasks, projects, and team planning context. |
+| Google Calendar | Use calendar events and scheduling context. |
+| Microsoft Teams | Use chats, channels, and meeting context. |
+| Excel | Work with spreadsheets, tables, formulas, charts, and ranges. |
+| Outlook | Find email and calendar context. |
+| Notion | Search pages, databases, notes, and workspace content. |
+| Slack | Reference channels, messages, and threads. |
+| Asana | Use tasks, projects, and planning context. |
 | Monday.com | Reference boards, items, and project status. |
 | Intercom | Use customer conversations and support context. |
-| GitHub | Search repos, issues, pull requests, and code context. |
+| GitHub | Search repositories, issues, pull requests, and code context. |
 | Vercel | Use deployments, logs, projects, and hosting context. |
 | Sentry | Reference issues, traces, and release health. |
-| Stripe | Use customers, billing, and payment context. |
-| Supabase | Connect project data and database context. |
+| Supabase | Use authorized Supabase project context. |
+| Stripe | Use customer, billing, payment, and subscription context. |
 | Zapier | Connect automations and app workflows. |
-
-More providers are added regularly.
 
 ## Connect an app
 
 <Steps>
   <Step title="Open Connectors">
-    Go to **Settings → Connectors**.
+    Go to **Settings > Connectors**.
   </Step>
-  <Step title="Select a connector">
-    Pick the app you want to link. A popup window opens to that app's sign-in flow.
+  <Step title="Choose a connector">
+    Select the app you want to connect.
   </Step>
-  <Step title="Authorize Babbily">
-    Sign in and grant the scopes Babbily requests. The popup closes when authorization completes and the connector shows as connected.
+  <Step title="Authorize access">
+    Follow the sign-in or setup flow for that app. Babbily shows the connector as connected when setup finishes.
   </Step>
   <Step title="Use it in chat">
-    Start a new message and reference the app naturally. You can also open the composer menu and pick the connector explicitly for that turn.
+    Ask in plain language, choose the connector manually, or type `/` to find connector commands.
   </Step>
 </Steps>
 
-## Use a connector in chat
-
-Once connected, you can:
-
-- **Ask in plain language.** "Find the latest thread with the design team in Slack" or "What did I commit to in last week's Asana standup?"
-- **Pick a connector for the turn.** Open the composer menu next to the message box and select the connector you want Babbily to prefer for that reply.
-- **Run a slash command.** Type `/` in the composer to see commands for connected apps (for example, search a specific Drive folder or summarize a Notion page).
-
 ## Approve actions before they run
 
-Some connectors can take actions, not just read data. When Babbily prepares an action—like sending an email or creating a calendar event—it pauses and shows you a draft to review.
+Some connectors can take action, not just read context. When Babbily prepares an action such as an email draft or workspace update, it asks for your approval before running it.
 
-You can:
+You can approve or cancel from the composer. If the action includes editable content, review it before approving.
 
-- **Approve** to run the action as drafted.
-- **Edit** the draft inline, then approve.
-- **Cancel** to discard the draft without running anything.
+<Warning>
+  Do not approve a connector action unless you understand what it will do. Babbily will not intentionally run approval-required actions without your confirmation.
+</Warning>
 
-Nothing is sent or written to a connected app until you approve it.
+## Disconnect an app
 
-## Manage permissions
-
-To review or remove access:
-
-1. Open **Settings → Connectors**.
-2. Select the connector.
-3. Use **Disconnect** to revoke Babbily's access immediately. You can reconnect at any time.
-
-Disconnecting removes the credential from Babbily but does not delete anything in the underlying app.
-
-## Privacy
-
-- Connector credentials are stored encrypted and used only to fulfill your requests.
-- Babbily does not train models on your connected data.
-- Action drafts always require your approval before they run.
+Open **Settings > Connectors**, select the connector, and disconnect it. Disconnecting removes Babbily's access to that app. It does not delete content inside the connected app.

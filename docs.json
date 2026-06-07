@@ -1,50 +1,93 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "sequoia",
-  "name": "Babbily Documentation",
+  "name": "Babbily Help Center",
+  "description": "Customer guides for chatting with AI models, using memory, connecting apps, managing teams, and understanding Babbily usage.",
   "colors": {
-    "primary": "#f8585c",
-    "light": "#f8585c",
-    "dark": "#f8585c"
+    "primary": "#D9363E",
+    "light": "#F8585C",
+    "dark": "#D9363E"
   },
   "favicon": {
     "light": "/images/Untitleddesign.png",
     "dark": "/images/Untitleddesign.png"
   },
+  "logo": {
+    "light": "/images/Untitleddesign.png",
+    "dark": "/images/Untitleddesign.png",
+    "href": "https://babbily.com"
+  },
   "navigation": {
     "pages": [
       "index",
-      "quickstart",
       {
-        "group": "Features",
+        "group": "Get started",
+        "icon": "rocket",
         "pages": [
-          "features/tools-and-skills",
-          "features/connectors",
-          "features/memory",
+          "quickstart",
+          "features/chat-and-models"
+        ]
+      },
+      {
+        "group": "Chat and creation",
+        "icon": "messages-square",
+        "pages": [
+          "features/file-attachments",
+          "features/deep-research-and-search",
+          "features/image-and-video-generation",
           "features/context-window",
-          "features/usage-budget"
+          "features/temporary-chat"
+        ]
+      },
+      {
+        "group": "Personalization",
+        "icon": "sparkles",
+        "pages": [
+          "features/memory",
+          "features/tools-and-skills",
+          "features/saved-prompts",
+          "features/connectors"
+        ]
+      },
+      {
+        "group": "Workspace",
+        "icon": "layout-dashboard",
+        "pages": [
+          "features/library-and-sharing",
+          "features/teams"
+        ]
+      },
+      {
+        "group": "Billing and privacy",
+        "icon": "shield-check",
+        "pages": [
+          "features/usage-budget",
+          "features/billing-and-plans",
+          "features/privacy-and-data"
+        ]
+      },
+      {
+        "group": "Troubleshooting",
+        "icon": "wrench",
+        "pages": [
+          "troubleshooting/common-issues"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Babbily",
+          "href": "https://babbily.com",
+          "icon": "house"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Support",
+          "href": "https://support.babbily.com",
+          "icon": "life-buoy"
         }
       ]
     }
-  },
-  "logo": {
-    "light": "/images/Untitleddesign.png",
-    "dark": "/images/Untitleddesign.png",
-    "href": "https://babbily.com"
   },
   "navbar": {
     "links": [
@@ -55,28 +98,21 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Babbily",
+      "href": "https://platform.babbily.com"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "icons": {
     "library": "lucide"

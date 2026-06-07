@@ -1,90 +1,55 @@
 ---
 title: "API usage budget"
-description: "Track your monthly Babbily spend across chat, image, and video generation with a shared dollar-based usage budget."
+description: "Understand how your monthly Babbily usage budget works, what counts, and when it resets."
+icon: "wallet"
 ---
 
-Every Babbily plan includes a monthly **API usage budget** in US dollars that covers the AI model calls Babbily makes on your behalf—chat replies, image generation, video generation, and tools like web search and deep research. Instead of counting tokens, Babbily charges actual provider cost against your budget so you always know how much room you have left.
+Every Babbily plan includes a monthly API usage budget. This budget covers AI work Babbily runs for you, such as chat replies, tools, image generation, video generation, and translation.
 
-## How it works
+## Plan budgets
 
-- Each plan has a fixed monthly budget. Every model call deducts its real cost (in cents) from your remaining balance.
-- The budget resets on your billing period end date. If you're on a paid plan, that matches your Stripe renewal date.
-- Usage is shared across everything you trigger in Babbily: chat, image generation, video generation, translate, and skills.
-- News articles you generate from the **News** view are *not* charged to your budget. They run on a separate hourly rate limit instead (see [News article generation limits](#news-article-generation-limits)).
-- Babbily refreshes your balance in the background after each generation, so the displayed total catches up within a few seconds.
+| Plan | Included usage |
+| --- | ---: |
+| Free | $5/month |
+| Personal | $9.99/month |
+| Premium | $19.99/month |
+| Ultra | $149.99/month |
+| Team | $99.99 per accepted user/month |
+| Teams Ultra | $149.99 per accepted user/month |
 
-## Budget by plan
+## What counts toward usage
 
-| Plan | Monthly budget |
-| --- | --- |
-| Free | $5 |
-| Personal | $9.99 |
-| Premium | $19.99 |
-| Team Member | $99.99 |
-| Ultra | $149.99 |
+Usage can include:
 
-Upgrading or downgrading mid-cycle prorates your remaining budget against the new plan limit.
+- Chat replies.
+- Tool calls such as web search, deep research, and finance research.
+- Image generation.
+- Video generation.
+- Translation.
+- File and media work that requires a model call.
 
-## Where to find it
+News article generation is handled separately and does not deduct from your monthly API usage budget. It may still have its own rate limits.
 
-A compact **Usage** card is pinned to the sidebar so you can keep an eye on your budget while you chat. It shows:
+## Where to see usage
 
-- **Percent used** — a progress bar and percentage that turn orange once you cross 80%.
-- **Days left** — how long until the budget resets.
-- **Upgrade** — a shortcut to the pricing page that appears once you cross 80%.
+The usage card shows your current usage and remaining budget. You can also open **Settings > Billing** to review your plan and billing details.
 
-When the sidebar is collapsed, the card shrinks to a single bolt icon, a thin progress bar, and the percentage. A warning triangle appears next to the icon at 80% and above.
+Babbily may refresh the usage card after model or media work finishes. If the number looks slightly delayed, wait a moment and refresh.
 
-For a full breakdown of your plan and renewal date, open **Settings → Billing**.
+## When usage resets
 
-## Low-budget warnings
+- Individual plans reset on the usage period shown in your account.
+- Paid plans usually align with the billing period.
+- Team members share the timing shown for the team plan.
 
-Babbily warns you before you run out:
+Unused budget does not roll over.
 
-- **Running low** — At 80% used, a banner appears above the composer with your remaining dollar amount before image or video generation.
-- **Exhausted** — At 100% used, Babbily blocks new generations and shows an upgrade prompt with the next reset date. Existing chats stay readable.
+## Low-budget and exhausted states
 
-You can dismiss the warning and keep sending messages until the budget is fully spent. After that, you'll need to wait for the reset or upgrade your plan.
+Babbily warns you when usage is getting high. If your budget is exhausted, new AI work may be blocked until your plan resets or you upgrade.
+
+Existing chats and saved content remain readable.
 
 <Tip>
-  Image and video generation are the most expensive actions per call. If you're close to your limit, switch to **Off** or **Manual** [tool mode](/features/tools-and-skills#tool-modes) for text replies to stretch your budget.
+  Image and video generation usually use more budget than short text replies. If you are near your limit, use model-only chat for lightweight tasks.
 </Tip>
-
-## When the budget resets
-
-The budget resets automatically at the end of each billing period:
-
-- **Paid plans** reset on the same day each month as your subscription renewal.
-- **Free plans** reset 30 days after sign-up and every 30 days after that.
-
-If a sync with the upstream gateway is delayed, the card shows a *Refreshing...* indicator and your real balance updates within a minute.
-
-## News article generation limits
-
-The **News** view lets you expand a headline into a full article using Perplexity Sonar Pro. Because Babbily covers this cost on your behalf, generated articles don't deduct from your monthly API usage budget. They're instead capped by a rolling hourly limit:
-
-- **20 articles per hour** per user, sliding window.
-- The window starts on your first generation and resets one hour later.
-- When you hit the cap, Babbily returns a `429` response and the **Generate article** action shows when the limit resets. Try again after that time.
-
-Reading existing articles, browsing headlines, and sharing news links don't count toward the limit—only triggering a fresh article generation does.
-
-## FAQ
-
-<AccordionGroup>
-  <Accordion title="Why dollars instead of tokens or messages?">
-    Different models have very different per-token prices, and a single image or video call can cost as much as hundreds of chat messages. A dollar budget gives you one consistent number to plan against, regardless of which model or tool you use.
-  </Accordion>
-  <Accordion title="Does the budget roll over?">
-    No. Unused budget does not carry into the next billing period.
-  </Accordion>
-  <Accordion title="What happens if I upgrade mid-cycle?">
-    Your new plan's budget takes effect immediately and is prorated for the rest of the current period.
-  </Accordion>
-  <Accordion title="Can I see per-request cost?">
-    Per-request cost isn't shown in chat today. The card reflects the total deducted across all of your activity in the current period.
-  </Accordion>
-  <Accordion title="Why don't generated news articles count against my budget?">
-    Babbily pays for news article generation directly and protects the shared cost with a per-user hourly rate limit instead. See [News article generation limits](#news-article-generation-limits) for the cap.
-  </Accordion>
-</AccordionGroup>
