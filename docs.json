@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "sequoia",
-  "name": "Babbily Help Center",
+  "name": "Babbily Documentaiton",
   "description": "Customer guides for chatting with AI models, using memory, connecting apps, managing teams, and understanding Babbily usage.",
   "colors": {
     "primary": "#D9363E",
@@ -157,6 +157,15 @@
     "library": "lucide"
   },
   "fonts": {
-    "family": "Inter"
+    "heading": {
+      "family": "Inter",
+      "weight": 800
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "markdown": {
+    "schema": false
   }
 }
